@@ -1,0 +1,610 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SeriesSubCafé</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+   
+    <!-- NavBar -->
+   <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg" class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="index.html">SeriesSubCafé</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Ingresar</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Acceso a la API</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="img/1.jpg" class="d-block w-100 c-img" alt="Slide 1">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="mt-5 fs-3 text-uppercase">Descubre la Tierra de Ooo</p>
+          <h1 class="display-1 fw-bolder text-capitalize">Hora De Aventura</h1>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5">Mirar Serie</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="img/2.jpg" class="d-block w-100 c-img" alt="Slide 2">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="text-uppercase fs-3 mt-5">La nueva temporada ha llegado</p>
+          <p class="display-1 fw-bolder text-capitalize">Rick and Morty</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+            data-bs-target="#booking-modal">Mirar Serie</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="img/3.jpg" class="d-block w-100 c-img" alt="Slide 3">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="text-uppercase fs-3 mt-5">Viaja a través de múltiples dimensiones</p>
+          <p class="display-1 fw-bolder text-capitalize">Bee y PuppyCat</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+            data-bs-target="#booking-modal">Mirar Serie</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+  </div>
+
+
+
+  
+  <div class="container py-5">
+    <h2 class="text-center">Series Destacadas</h2>
+
+    <div class="row row-cols-1 mx-auto row-cols-md-4 g-5 py-5" id="data">
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Bee y PuppyCat</h5>
+            <p class="card-text">En una encantadora isla mágica, la impulsiva Bee y su peludo amigo viven toda clase... </p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Invincible</h5>
+            <p class="card-text">Mark Grayson is a normal teenager except for the fact that his father is the most...</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jellystone!</h5>
+            <p class="card-text">No hay una descripción disponible.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/7.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Ghost and Molly McGee</h5>
+            <p class="card-text">La interpolación de la preadolescente Molly McGee y un fantasma gruñón llamado Scratch queda perpetua cuando uno de los hechizos de Scratch sale mal.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/8.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Glitch Techs</h5>
+            <p class="card-text">Game-world monsters are wreaking real-world havoc. Here comes tech support!</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/9.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">kipo</h5>
+            <p class="card-text">Una niña se abre camino en un mundo de animales mutantes mientras aprende a sobrevivir y descubre sus poderes con la ayuda de un variado grupo de amigos.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/10.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Adventure Time: Distant Lands</h5>
+            <p class="card-text">Finn y Jake están de regreso.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col">
+        <div class="card" style="width: 15rem;">
+          <img src="./img/12.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Avatar: la leyenda de Aang</h5>
+            <p class="card-text">Un chico de 12 años y sus amigos deben usar sus poderes para salvar al mundo del maléfico Señor del Fuego y traer paz para las tres naciones.</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <button type="button" class="btn btn-primary">Ver Ahora</button>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="container py-5">
+  <h2 class="text-center">Series Nuevas</h2>
+
+  <div class="row row-cols-1 row-cols-md-4 g-5 py-5 card-content" class="card-content" style="display: none">
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Bee y PuppyCat</h5>
+          <p class="card-text">En una encantadora isla mágica, la impulsiva Bee y su peludo amigo viven toda clase... </p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Invincible</h5>
+          <p class="card-text">Mark Grayson is a normal teenager except for the fact that his father is the most...</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Jellystone!</h5>
+          <p class="card-text">No hay una descripción disponible.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/7.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">The Ghost and Molly McGee</h5>
+          <p class="card-text">La interpolación de la preadolescente Molly McGee y un fantasma gruñón llamado Scratch queda perpetua cuando uno de los hechizos de Scratch sale mal.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/8.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Glitch Techs</h5>
+          <p class="card-text">Game-world monsters are wreaking real-world havoc. Here comes tech support!</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/9.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">kipo</h5>
+          <p class="card-text">Una niña se abre camino en un mundo de animales mutantes mientras aprende a sobrevivir y descubre sus poderes con la ayuda de un variado grupo de amigos.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/10.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Adventure Time: Distant Lands</h5>
+          <p class="card-text">Finn y Jake están de regreso.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/12.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Avatar: la leyenda de Aang</h5>
+          <p class="card-text">Un chico de 12 años y sus amigos deben usar sus poderes para salvar al mundo del maléfico Señor del Fuego y traer paz para las tres naciones.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/13.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Elliott from Earth</h5>
+          <p class="card-text">Un niño y su madre se encuentran repentinamente transportados a algún lugar del universo, rodeados de una increíble variedad de alienígenas procedentes de nuevos y desconocidos rincones de la galaxia.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/14.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">The Midnight Gospel</h5>
+          <p class="card-text">Traversing trippy worlds inside his universe simulator, Clancy the space caster explores existential questions about life, death and everything in between.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/15.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Solar Opposites</h5>
+          <p class="card-text">A family of aliens from a much better world must take refuge in middle America after the destruction of their planet.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/16.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Harley Quinn</h5>
+          <p class="card-text">Harley Quinn has finally broken things off once and for all with the Joker and attempts to make it on her own as the criminal Queenpin of Gotham City.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/17.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mao Mao Heroes of Pure Heart</h5>
+          <p class="card-text">No hay una descripción disponible.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card" style="width: 15rem;">
+        <img src="./img/18.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">The Owl House</h5>
+          <p class="card-text">Luz, una adolescente segura de sí misma, descubre la entrada a un reino mágino, donde se hace amiga de Eda, una bruja rebelde.</p>
+        </div>
+        <div class="d-flex justify-content-around mb-5">
+          <button type="button" class="btn btn-primary">Ver Ahora</button>
+        </div>
+      </div>
+    </div>
+
+
+
+    
+
+  </div>
+
+  <div class="pagination"> 
+    <li class="page-item previous-page disable"><a class="page-link" href="javascript:void(0)">Atras</a></li>
+    <li class="page-item current-page active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+    <li class="page-item current-page"><a class="page-link" href="#">5</a></li>
+    <li class="page-item current-page"><a class="page-link" href="#">6</a></li>
+    <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+    <li class="page-item current-page"><a class="page-link" href="#">10</a></li>
+    <li class="page-item next-page"><a class="page-link" href="#">Siguiente</a></li>
+
+
+
+  </div>
+
+
+<script type="text/javascript">
+  function getPageList(totalPages, page, maxLength) {
+    function range(start, end) {
+      return Array.from(Array(end - start + 1), (_, i) => i + start);
+    }
+
+    var sideWidth = maxLength < 9 ? 1 : 2;
+    var leftWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+    var rightWidth = (maxLength - sideWidth * 2 - 3) >> 1;
+
+    if(totalPages <= maxLength) {
+      return range(1, totalPages);
+
+    }
+
+    if(page <= maxLength - sideWidth - 1 - rightWidth) {
+      return range(1, maxLength - sideWidth - 1).concat(0, range(totalPages - sideWidth + 1, totalPages));
+    }
+
+    if(page >= totalPages - sideWidth - 1 - rightWidth) {
+      return range(1, sideWidth).concat(0, range(totalPages - sideWidth - 1 - rightWidth - leftWidth, totalPages));
+    }
+
+    return range(1, sideWidth).concat(0, range(page - leftWidth, page + rightWidth), 0, range(totalPages - sideWidth + 1, totalPages));
+  }
+
+  $(function(){
+    var numberOfItems = $(".card-content .card").length;
+    var limitPerPage = 4; //Cuantas tarjetas visibles por pagina
+    var totalPages = Math.ceil(numberOfItems / limitPerPage);
+    var paginationSize = 7; // cuantas paginas visibles en la paginacion
+    var currentPage;
+
+    function showPage(whichPage) {
+      if(whichPage < 1 || whichPage > totalPages) return false;
+
+      currentPage = whichPage;
+
+      $(".card-content .card").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+    
+      $(".pagination li").slice(1, -1).remove();
+
+      getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+        $("<li>").addClass("page-item").addClass(item ? "current-page" : "dots")
+          .toggleClass("active", item === currentPage).append($("<a>").addClass("page-link")
+            .attr({href: "javascript:void(0)"}).text(item || "...")).insertBefore(".next-page");
+      });
+
+      $(".previous-page").toggleClass("disable", currentPage === 1);
+      $(".next-page").toggleClass("disable", currentPage === totalPages);
+      return true;
+    }
+
+    $(".pagination").append(
+      $("<li>").addClass("page-item").addClass("previous-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("Atras")),
+      $("<li>").addClass("page-item").addClass("next-page").append($("<a>").addClass("page-link").attr({href: "javascript:void(0)"}).text("Siguiente"))
+    );
+
+
+
+    $(".card-content").show();
+    showPage(1);
+
+    $(document).on("click", ".pagination li.current-page:not(.active)", function() {
+      return showPage(+$(this).text());
+    });
+
+    $(".next-page").on("click", function() {
+      return showPage(currentPage + 1);
+    });
+
+    $(".previous-page").on("click", function() {
+      return showPage(currentPage - 1);
+    });
+
+
+  });
+
+</script>
+
+</div>
+
+
+
+
+
+
+
+
+
+      <footer class="text-center bg-body-tertiary" data-bs-theme="dark" >
+        <!-- Grid container -->
+        <div class="container pt-4">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+      
+            <!-- Twitter -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-twitter"></i
+            ></a>
+
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn btn-link btn-floating btn-lg text-body m-1"
+              href="#!"
+              role="button"
+              data-mdb-ripple-color="dark"
+              ><i class="fab fa-instagram"></i
+            ></a>
+
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.05); color: #cccccc;">
+          © 2024 Copyright:
+          <a class="text-body" href="#">SeriesSubCafé</a>
+        </div>
+        
+        
+        <!-- Copyright -->
+      </footer>
+
+      
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <script src="./script.js"></script>
+  </body>
+</html>

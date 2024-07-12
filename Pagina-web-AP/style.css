@@ -1,0 +1,79 @@
+.c-item {
+  height: 480px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+
+.card-img-top {
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.card{
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.card-body {
+  padding: 25px;
+  margin-top: -15px;
+}
+
+
+.btn-primary:hover{
+  background-color: black;
+  border: none;
+}
+h3,h5{
+  color: rgb(0, 91, 228);
+}
+
+.pagination{
+  text-align: center;
+  margin: 30px 30px 60px;
+  user-select: none;
+}
+
+.pagination li{
+  display: inline-block;
+  margin: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+
+.pagination li a{
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 45px;
+}
+
+.previous-page, .next-page{
+  color: #ff0000;
+  width: 100;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.previous-page:hover{
+  transform: translateX(-5px);
+}
+
+.next-page:hover{
+  transform: translateX(5px);
+}
+
+
+.current-page, .dots{
+  background: #ff0000;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
